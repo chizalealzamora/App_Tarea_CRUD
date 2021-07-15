@@ -21,14 +21,14 @@ public class Tarea_DAO {
     public static List <Tarea> getAllFalse(Connection connection){
         List <Tarea> list = new ArrayList<>();
         try{
-            String sql ="SELECT id_tarea, nombre_tarea, tarea_realizado, fecha_hora, eliminar_tarea FROM tarea WHERE tarea_realizado = false";
+            String sql = "SELECT id_tarea, nombre_tarea, tarea_realizado, fecha_hora, eliminar_tarea FROM tarea WHERE tarea_realizado = false";
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet result = preparedStatement.executeQuery();
                 
             while (result.next()) {
                 Tarea obj = new Tarea();
-
+                
                 obj.setId_tarea(result.getInt("id_tarea"));
                 obj.setNombre_tarea(result.getString("nombre_tarea"));
                 obj.setTarea_realizado(result.getBoolean("tarea_realizado"));

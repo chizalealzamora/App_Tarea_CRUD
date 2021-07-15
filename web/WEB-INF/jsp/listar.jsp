@@ -17,7 +17,7 @@
                             <h1 class="tittle">Tareas chiza.app</h1>
                            
                             <div class="box-boton">
-                                <button class="button_create ">Hay ${contador[0].count} tareas por hacer</button>
+                                <button class="button_create ">Hay ${contador} tareas por hacer</button>
                             </div>  
                             
                         </div>
