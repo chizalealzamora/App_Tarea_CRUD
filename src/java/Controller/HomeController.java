@@ -15,35 +15,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class HomeController extends HttpServlet {
     private JdbcTemplate jdbc;
-    //CONSTURCTOR
-    public HomeController(){
-        Conectar con = new Conectar();
-        this.jdbc = new JdbcTemplate(con.conectar());
-    } 
+    private Conectar connection;
+    
+    
+    
+    
     //REPASAR ESTÉ TIPO DE CÓDIGO
     @RequestMapping("home.htm") 
     public ModelAndView controlador(){
         return new ModelAndView("index");
     }
     
-    @RequestMapping("listar.htm")
-    public ModelAndView listar(){
-        ModelAndView mav=new ModelAndView();
-        String sql = "select * from tarea where tarea_realizado = false;";
-        String sqlTrue = "select * from tarea where tarea_realizado = true ;";
-        String sqlCont = "select count(*) from tarea where tarea_realizado = false";
-        
-        List datos=this.jdbc.queryForList(sql);
-        List dato_true= this.jdbc.queryForList(sqlTrue);
-        List dato_contador= this.jdbc.queryForList(sqlCont);
-        
-        mav.addObject("Tareas", datos);
-        mav.addObject("tarea_boolean", dato_true);
-        mav.addObject("contador",dato_contador);
-        
-        mav.setViewName("listar");
-        return mav;
-    }
     
     @RequestMapping(value = "agregar.htm", method = RequestMethod.POST)
     public ModelAndView agregar(HttpServletRequest request){

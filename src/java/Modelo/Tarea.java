@@ -5,18 +5,18 @@ public class Tarea {
     String nombre_tarea;
     boolean tarea_realizado;
     String fecha_hora;
-    boolean eliminar;
+    boolean eliminar_tarea;
 
     public Tarea(){
 
     }
     
-    public Tarea(int id_tarea, String nombre_tarea, boolean tarea_realizado, String fecha_hora, boolean eliminar) {
+    public Tarea(int id_tarea, String nombre_tarea, boolean tarea_realizado, String fecha_hora, boolean eliminar_tarea) {
         this.id_tarea = id_tarea;
         this.nombre_tarea = nombre_tarea;
         this.tarea_realizado = tarea_realizado;
         this.fecha_hora = fecha_hora;
-        this.eliminar = eliminar;
+        this.eliminar_tarea = eliminar_tarea;
     }
 
     public int getId_tarea() {
@@ -51,11 +51,11 @@ public class Tarea {
         this.fecha_hora = fecha_hora;
     }
 
-    public boolean isEliminar() {
-        return eliminar;
+    public boolean isEliminar_tarea() {
+        return eliminar_tarea;
     }
 
-    public void setEliminar(boolean eliminar) {
-        this.eliminar = eliminar;
+    public void setEliminar_tarea(boolean eliminar_tarea) {
+        this.eliminar_tarea = eliminar_tarea;
     }
 }

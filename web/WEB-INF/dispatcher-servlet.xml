@@ -18,10 +18,11 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="home.htm">HomeController</prop>
-                <prop key="listar.htm">HomeController</prop>
                 <prop key="agregar.htm">HomeController</prop>
                 <prop key="borrar_tarea.htm">HomeController</prop>
                 <prop key="checked.htm">HomeController</prop>
+                <prop key="listar.htm">ListarController</prop>
+               
             </props>
         </property>
     </bean>
@@ -37,6 +38,7 @@
     The index controller.
     -->
     <bean name= "HomeController" class="Controller.HomeController" />
+    <bean name="ListarController" class="Controller.ListarController"/>
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
