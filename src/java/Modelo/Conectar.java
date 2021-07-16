@@ -8,7 +8,7 @@ public class Conectar {
         private Connection connection;
         private final String urlDatabase = "jdbc:postgresql://localhost:5432/db-sistema";
         private final String user = "postgres";
-        private final String password = "12345";
+        private final String password = "bowie139";
         //private static String message;
 
         public Connection getConnection() {

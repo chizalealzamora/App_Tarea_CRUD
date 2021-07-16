@@ -5,13 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DeleteTarea {
-    public static int delete(Connection connection,String id_tarea){
+    public static int delete(Connection connection,int id_tarea){
         int result=0;
         try{
-            String sql="DELETE FROM tarea WHERE id_tarea= ?::UUID";
+            String sql="DELETE FROM tarea WHERE id_tarea= ?";
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, id_tarea);
+            preparedStatement.setInt(1, id_tarea);
             
             result= preparedStatement.executeUpdate();
         }catch(SQLException e){

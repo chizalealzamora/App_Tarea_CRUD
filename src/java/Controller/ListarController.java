@@ -25,7 +25,7 @@ public class ListarController {
         
         ModelAndView mav=new ModelAndView();
         mav.addObject("Tareas",list_false);
-        mav.addObject("tarea_realizado", list_true);
+        mav.addObject("tarea_boolean", list_true);
         mav.addObject("contador", cont);
         
         mav.setViewName("listar");
