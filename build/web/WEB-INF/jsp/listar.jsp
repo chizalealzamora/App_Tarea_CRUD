@@ -25,10 +25,10 @@
 
                     <form action="agregar.htm" method="POST" class="center-form">
                         <p>Nombre de la Tarea</p>
-                        <input type="text" name="nombre_tarea"><input type="submit" name="accion" value="Agregar"><br>
+                        <input type="text" name="nombre_tarea">
+                        <input class="btnAdd"" type="submit" name="accion" value="Agregar">
                     </form>
 
-                            
                     <table class="table">
                         <thead>
                             <tr>
