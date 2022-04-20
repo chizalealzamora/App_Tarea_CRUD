@@ -21,7 +21,7 @@ body {
 .header {
     display: flex;
     width: 100%;
-    height: 5rem;
+    height: 9rem;
     justify-content: center;
     background: #000000;
 }
@@ -199,4 +199,95 @@ td:last-child {
 .search_img{
     width: 2rem;
     height: 2rem;
+}
+
+.point:hover {
+    background: #F8F8F8;
+    color: #0080FF;
+}
+
+.more_button {
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: visible;
+}
+
+.more_button img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.more_button:focus div {
+    display: flex;
+}
+
+.e_modal {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    border-radius: 0.5rem;
+    width: 16rem;
+    left: -13rem;
+    top: 4rem;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.e_modal div {
+    font-weight: normal;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    width: 13rem;
+    height: 50%;
+    background-color: white;
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
+    transition: all 0.3s;
+}
+
+.e_modal div:first-child {
+    background-color: #FFFFFF;
+    color: #0080FF!important;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.e_modal div:last-child {
+    background-color: rgb(217, 51, 57, 5%);
+    color: #D93339 !important;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: none;
+}
+
+.e_modal div:hover {
+    background-color: #F8F9FA;
+}
+
+.tr-cursor{
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.tr-cursor:hover {
+    cursor: pointer;
+    background-color: #F8F8F8;
+}
+
+.img-mg{
+    margin-left: 1rem;
+}
+
+.create {
+    display: none;
+    background-color: #FFF;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 20;
+    height: 100vh;
+    transition: all 0.5s;
+    padding-bottom: 0;
+    flex-direction: column;
+    overflow: hidden !important;
 }

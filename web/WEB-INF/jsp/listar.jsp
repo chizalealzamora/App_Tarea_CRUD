@@ -96,9 +96,21 @@
                                     <td>${tarea_bool.nombre_tarea}</td>
                                     <td>${tarea_bool.fecha_hora}</td>
                                     <td>
-                                        <a class="sexo " href="borrar_tarea.htm?id_tarea=${tarea_bool.id_tarea}">
-                                            <img class="img-borrar" src="Resources/img/eliminar.svg">
-                                        </a>
+                                        <button class="more_button"  >
+                                            <img src="Resources/icons/more_vertical.svg">  
+                                            <div class="e_modal">
+                                                <div onclick="editarUsuario('${usuario.id}');" class="blurparent">Editar</div>
+                                                <c:if test="${user_session.id == usuario.id}">
+                                                    <a role="button" onclick="alertDelete()">
+                                                        <div onclick="blurParent(this)">Eliminar</div>     
+                                                    </a>   
+                                                    <a role="button" class="sexo " href="borrar_tarea.htm?id_tarea=${tarea_bool.id_tarea}">
+                                                        <div src="Resources/img/eliminar.svg" onclick="blurParent(this)">Eliminar</div>  
+                                                    </a>
+                                                </c:if>                                                              
+                                            </div>
+                                        </button>
+                                        
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -110,7 +122,7 @@
                             <span class="close-modal pointer" onclick="closeModal();">
                                 <img src="resources/images/icons/Cerrar.svg">
                             </span>
-                            <div id="modalTitle" class="modal-title">Crear una tarea</div>
+                            <div id="modalTitle" class="modal-title">Guardar</div>
                             
                             <input id="btnModalSave" type="button" class="save pointer" value="Guardar" onclick="guardarUsuario('crear_usuario.htm')">
                             <button class="btnAdd" type="button" name="accion" value="Agregar" onclick="openModal();">Crear tarea</button>
