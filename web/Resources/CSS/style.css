@@ -28,7 +28,8 @@ body {
 
 .box_header {
     display: flex;
-    width: 100rem;
+    width: 100%;
+    padding: 0 5rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -61,8 +62,7 @@ body {
 }
 
 .img_logo {
-    display: flex;
-    width: 5rem;
+    height: 2rem;
 }
 
 .sexo {
@@ -169,7 +169,7 @@ td:last-child {
     border-radius: 0.5rem;
     position: relative;
     align-items: center;
-    width: 23rem;
+    gap: 1rem;
     border: 1px solid #A9B1BE;
 }
 

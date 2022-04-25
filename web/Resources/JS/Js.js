@@ -37,7 +37,6 @@ function closeModal() {
     modal.style.height = '0';
     document.removeEventListener('keydown', escPress2);
     cleanFieldsUsuarios();
-    cleanFieldsRoles();
 }
 
 function escPress2(ev) {

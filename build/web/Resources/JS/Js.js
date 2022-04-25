@@ -37,7 +37,6 @@ function closeModal() {
     modal.style.height = '0';
     document.removeEventListener('keydown', escPress2);
     cleanFieldsUsuarios();
-    cleanFieldsRoles();
 }
 
 function escPress2(ev) {
@@ -65,26 +64,16 @@ function escPress(ev) {
 
 
 const guardarTarea  = async (method) => {
-    let datos = {};
-    if (method === 'agregar.htm') {
-        datos = {
-            nombre: document.getElementById("nombre").value,
-            correo: document.getElementById("correo").value,
-            telefono: document.getElementById("telefono").value,
-            password: document.getElementById("password").value,
-            id_sis_perfil: document.getElementById("id_sis_perfil").value,
-            id_cat_estado: document.getElementById("checkbox").checked,
-        };
-    } else {
-        datos = {
-            id_usuario: document.getElementById("idUsuario").value,
-            nombre: document.getElementById("nombre").value,
-            correo: document.getElementById("correo").value,
-            telefono: document.getElementById("telefono").value,
-            password: document.getElementById("password").value,
-            id_sis_perfil: document.getElementById("id_sis_perfil").value,
-            id_cat_estado: document.getElementById("checkbox").checked,
-        };
+    let datos = {
+        nombre: document.getElementById("nombre").value,
+        correo: document.getElementById("correo").value,
+        telefono: document.getElementById("telefono").value,
+        password: document.getElementById("password").value,
+        id_sis_perfil: document.getElementById("id_sis_perfil").value,
+        id_cat_estado: document.getElementById("checkbox").checked,
+    };
+    if (method !== 'agregar.htm') {
+        datos.id_usuario = document.getElementById("idUsuario").value;
     }
     await $.ajax({
         url: method,

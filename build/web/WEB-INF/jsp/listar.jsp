@@ -14,13 +14,13 @@
                 
                 <header class="header">
                     <div class="box_header">
-                        <img class="img_logo" src="Resources/img/tarea.svg">
+                        <img class="img_logo" src="Resources/icons/sidebarIcon.svg">
+
                         <h1 class="tittle">Tareas chiza.app</h1>
                         
                         <div class="box-boton">
                             <button class="button_create ">Hay ${contador} tareas por hacer</button>
                         </div>  
-                        
                     </div>
                 </header>
                 <div>    
@@ -33,8 +33,9 @@
 -->
                     <div class="box_center_options">
                         <div class="box_search"> 
-                            <input id="search_input" class="input_search" type="search" placeholder="Búsqueda rápida" autocomplete="" value="" onclick="cleanSearch()">
                             <img src="Resources/icons/lupa.svg" class="search_img">
+                            <input id="search_input" class="input_search" type="search" placeholder="Búsqueda rápida" autocomplete="" value="" onclick="cleanSearch()">
+                            
                         </div>
                         <button class="btnAdd" type="submit" name="accion" value="Agregar" onclick="openModal();"><p>Crear tarea</p></button>
                     </div>
