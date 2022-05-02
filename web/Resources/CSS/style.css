@@ -63,6 +63,7 @@ body {
 
 .img_logo {
     height: 2rem;
+    cursor: pointer;
 }
 
 .sexo {
@@ -148,20 +149,6 @@ td:last-child {
     display: flex;
     justify-content:center;
     align-items: center;
-}
-
-.btnAdd{
-    display: flex;
-    align-items: center;
-    background-color:#0070E0;   
-    border-radius: 5px;
-    font-family: 'Roboto';
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    width: 12.3rem;
-    border-radius: 0.5rem;
-    padding: 0rem, 1.6rem, 0rem, 1.6rem;
 }
 
 .box_search {
@@ -290,4 +277,22 @@ td:last-child {
     padding-bottom: 0;
     flex-direction: column;
     overflow: hidden !important;
+}
+
+.btnAdd{
+    all: unset;
+}
+
+.btnAdd{
+    display: flex;
+    align-items: center;
+    background-color:#0070E0;   
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    width: 12.3rem;
+    border-radius: 0.5rem;
+    padding: 0rem, 1.6rem, 0rem, 1.6rem;
 }

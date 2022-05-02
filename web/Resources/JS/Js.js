@@ -65,15 +65,11 @@ function escPress(ev) {
 
 const guardarTarea  = async (method) => {
     let datos = {
-        nombre: document.getElementById("nombre").value,
-        correo: document.getElementById("correo").value,
-        telefono: document.getElementById("telefono").value,
-        password: document.getElementById("password").value,
-        id_sis_perfil: document.getElementById("id_sis_perfil").value,
-        id_cat_estado: document.getElementById("checkbox").checked,
+        nombre: document.getElementById("nombre_tarea").value, 
     };
     if (method !== 'agregar.htm') {
-        datos.id_usuario = document.getElementById("idUsuario").value;
+        datos.id_tarea = document.getElementById("idTarea").value;
+        datos.nombre=document.getElementById("nombre").value;
     }
     await $.ajax({
         url: method,
